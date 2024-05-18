@@ -1,0 +1,189 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://resources/scripts/video_base.gd" type="Script" id=1]
+[ext_resource path="res://resources/elements/effect_CRT_full0.tscn" type="PackedScene" id=2]
+[ext_resource path="res://resources/elements/page_blank.tscn" type="PackedScene" id=3]
+[ext_resource path="res://resources/scripts/label_fill.gd" type="Script" id=4]
+[ext_resource path="res://resources/fonts/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://resources/elements/effect_loading_full0.tscn" type="PackedScene" id=6]
+[ext_resource path="res://resources/elements/red_mark.tscn" type="PackedScene" id=7]
+[ext_resource path="res://resources/elements/label_fill.tscn" type="PackedScene" id=8]
+[ext_resource path="res://resources/elements/timer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://resources/elements/effect_CRT_background_full0.tscn" type="PackedScene" id=10]
+[ext_resource path="res://resources/elements/footage_placeholder0.tscn" type="PackedScene" id=11]
+[ext_resource path="res://resources/elements/effect_test_image.tscn" type="PackedScene" id=12]
+[ext_resource path="res://resources/scripts/music_volume.gd" type="Script" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 61
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 54
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 64
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="video" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="page" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="label_fill" type="Label" parent="page"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -402.0
+margin_top = -88.0
+margin_right = 512.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 1 )
+text = "What is Index: Purger?"
+valign = 1
+autowrap = true
+clip_text = true
+script = ExtResource( 4 )
+letter_delay = 0.01
+font_size = 61
+outline_size = 1
+
+[node name="red_mark" parent="page" instance=ExtResource( 7 )]
+margin_left = 849.0
+margin_top = 498.0
+margin_right = -581.0
+margin_bottom = -500.0
+
+[node name="red_mark2" parent="page" instance=ExtResource( 7 )]
+margin_left = 562.0
+margin_top = 597.0
+margin_right = -550.0
+margin_bottom = -477.0
+time = 1.0
+delay = 0.297
+
+[node name="effect_loading" parent="page" instance=ExtResource( 6 )]
+
+[node name="effect_CRT" parent="page" instance=ExtResource( 2 )]
+
+[node name="timer" parent="page" instance=ExtResource( 9 )]
+start_on_current = true
+on_end_event = "next_page"
+delay = 5.0
+
+[node name="page2" parent="." instance=ExtResource( 3 )]
+
+[node name="footage_placeholder0" parent="page2" instance=ExtResource( 11 )]
+
+[node name="effect_test_image" parent="page2" instance=ExtResource( 12 )]
+
+[node name="effect_CRT2" parent="page2" instance=ExtResource( 10 )]
+
+[node name="red_mark" parent="page2" instance=ExtResource( 7 )]
+margin_left = 413.0
+margin_top = 418.0
+margin_right = -957.0
+margin_bottom = -653.0
+rect_rotation = 89.9999
+
+[node name="label_fill" parent="page2" instance=ExtResource( 8 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -531.0
+margin_top = -91.0
+margin_right = 500.0
+margin_bottom = 427.0
+custom_fonts/font = SubResource( 2 )
+text = "A fast-paced first-person shooter set in a dystopian city named Index-0, where you take a role of 
+Omega Security mercenary. 
+
+You will have a broad selection of equipment and perks to accomplish your missions.
+
+Treat it as a dystopian american LSD shooter with perks where you have to deal with hitscan enemies.
+
+In other words, a weird bloody corporate sandbox."
+align = 0
+valign = 0
+letter_delay = 0.002
+font_size = 32
+
+[node name="label_fill2" parent="page2" instance=ExtResource( 8 )]
+self_modulate = Color( 1, 0, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -452.0
+margin_top = -377.0
+margin_right = 452.0
+margin_bottom = -64.0
+custom_fonts/font = SubResource( 3 )
+text = "What is Index: Purger?"
+valign = 0
+letter_delay = 0.009
+font_size = 54
+
+[node name="effect_CRT" parent="page2" instance=ExtResource( 2 )]
+
+[node name="effect_loading" parent="page2" instance=ExtResource( 6 )]
+
+[node name="timer2" parent="page2" instance=ExtResource( 9 )]
+start_on_current = true
+on_end_event = "next_page"
+delay = 15.0
+
+[node name="page3" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="label_fill3" parent="page3" instance=ExtResource( 8 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -580.0
+margin_top = -91.0
+margin_right = 580.0
+margin_bottom = 222.0
+custom_fonts/font = SubResource( 4 )
+text = "The end lol"
+valign = 0
+start_on_event = false
+font_size = 64
+outline_size = 1
+
+[node name="effect_CRT" parent="page3" instance=ExtResource( 2 )]
+
+[node name="effect_loading" parent="page3" instance=ExtResource( 6 )]
+
+[node name="music_volume" type="Control" parent="page3"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 13 )
+volume = 0.0

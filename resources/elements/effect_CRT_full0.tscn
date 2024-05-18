@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://resources/shaders/crt_effect.gdshader" type="Shader" id=1]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/overlay = true
+shader_param/scanlines_opacity = 0.195
+shader_param/scanlines_width = 0.258
+shader_param/grille_opacity = 0.23
+shader_param/resolution = Vector2( 640, 480 )
+shader_param/pixelate = false
+shader_param/roll = true
+shader_param/roll_speed = 128.0
+shader_param/roll_size = 97.74
+shader_param/roll_variation = 3.27
+shader_param/distort_intensity = 0.0
+shader_param/noise_opacity = 0.02
+shader_param/noise_speed = 0.36
+shader_param/static_noise_intensity = 0.053
+shader_param/aberration = 0.003
+shader_param/brightness = 1.357
+shader_param/discolor = true
+shader_param/warp_amount = 0.012
+shader_param/clip_warp = false
+shader_param/vignette_intensity = 0.653
+shader_param/vignette_opacity = 0.514
+shader_param/cor_brightness = 1.24
+shader_param/cor_contrast = 1.0
+shader_param/cor_saturation = 1.0
+
+[node name="effect_CRT" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="copy" type="BackBufferCopy" parent="."]
+position = Vector2( 960, 540 )
+scale = Vector2( 9.6, 5.4 )
+copy_mode = 2
+
+[node name="effect" type="ColorRect" parent="."]
+material = SubResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -6.10352e-05

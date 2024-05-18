@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://resources/scripts/red_mark.gd" type="Script" id=1]
+[ext_resource path="res://resources/shaders/red_marker.gdshader" type="Shader" id=2]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 2 )
+
+[node name="red_mark" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1430.0
+margin_bottom = -998.0
+script = ExtResource( 1 )
+delay = 0.1
+
+[node name="copy" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
+[node name="effect" type="ColorRect" parent="."]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0

@@ -1,0 +1,87 @@
+Episode 1 plot
+
+- Powered by Godot Engine. "This game is made in Godot. This video is also made with Godot. Godot, can you fix my life?"
+
+- Play expt73_bend. I love this one.
+
+- Ordered set of footages that will be used during this video. For the time being it is undefined. Mainly this part is needed for music to play, really.
+
+- The start.
+Hello everyone and welcome to the first episode of the Index: Purger devlog. In this episode, i would like to introduce you into this game project, so i'll try to keep it as short as possible while keeping it informative enough. 
+
+- Shoutout.
+Before i start; Shoutout to Road to Vostok devlog that is heavily inspiring me during creation of this episode. Two years ago i've seen it for first time and i thought that would be amazing to make that kind of series for this project too, however, it turned out to be way more problematic to showcase this project during the earlier stages of development. I guess people with broken accent are often doing wild things.
+
+- Plans.
+This episode will be covering the following set of moments:
+- A Short Brief into Game.
+- What Can You See in These Series?
+- How This Project was Started?
+- The Main Inspiration.
+- The Side Inspiration.
+- Game and Visual Design.
+- Showcase of Currently Developed Mechanics.
+- Development Tools.
+- Roadmap and Future Plans.
+- And How Can YOU Participate in Development of This Project?
+Let's get started!
+
+- Short Brief into Game.
+Index: Purger is an experimental fast-paced first-person shooter powered by Godot Engine, in this game you take a role of Omega Security mercenary, which participates in variety of military operations in the restricted zones and variety of other missions. The world of the game is set in a dystopian cityscape known as Index-0. You will have a broad selection of equipment and perks to deal with extreme military conflicts which will always be a part of the main character's "job". Experimentation with equipment and perks is a way to survive in this bloody sandbox. Besides that you'll be able to participate in "days of citizen life" of the main character, during which you can choose between living a peaceful life or turning the sector into criminal bloodshed as well as learning more about the surrounding game world and participating in various events.
+
+- What Can You See in These Series?
+During this devlog i would like to share progress of development of this game, as well as share information that may be helpful for developers or may be interesting for players. That may include my thoughts about game design in general, workflows, tools made for Godot and etc. This way, i hope these series will be both informative when it comes to telling about this game's development progress and also be helpful for others. Besides that, i hope to build up a community around this game in order to gain more community feedback to improve this game. Voice of everyone will be heard.
+
+- How This Project was Started?
+This project was started at May 2022, i've been fooling around in Godot Engine and made my personal test project in form of the first-person shooter. Back then i thought this engine isn't advanced enough for that kind of stuff, but the more i've been working with it, the more fun i found it to use, it was so easy to make a game with it, much easier than Unity for some reason. When Unity stripped me of possibility to control anything with code, Godot given an actual possibility to automize everything with code, which i highly appreciate and that basically untied my hands in all possible ways. The project has slowly became a heavy prototype with mechanics and huge variety of blockouts in relatively short amount of time, becoming a strong foundation to build a fast-paced first-person shooter. I'm not saying that Godot is a flawless engine, but people underestimated (and still seem to underestimate) its possibilities in making of 3D games. Godot still cannot compete with other engines that have broad marketplaces for assets and code and that may have more polished features for making of 3D games, but Godot is certainly unique when it comes to creation of the game from scratch as prototyping is extremely fast, you have a total control over everything and you will not have anything that would make your game heavier from the start due to lightweight design of the engine. Besides that Godot can be used for creation of any kind of standalone application, which may be useful for creation of utility tools or other kinds of programs, such as the one that i use to make this video.
+
+- The Main Inspiration.
+There are basically three main inspirations that i had. Of course a lot of various shooters are inspiring me when it comes to a set of elements of this game, and i'm talking about shooters like Escape From Tarkov or Battlefield 3 for example, but still, when it comes to the core, mainly i'm inspired by Half-Life 2, District maps for Garry's Mod and Cruelty Squad. That might seem as a bunch of wild picks, but let me explain...
+
+:: Half-Life 2
+Probably Half-Life 2 is ancient at this point, but i cannot say it became less influencial with time, at least for myself.
+- Graphics. What is very inspiring in the graphics of this game is how simple the workflow for the environmental props and for the brush textures. Simple, but rather effective. Additionally, lighting and usage of colors in this game is very much inspiring too.
+- Movement. The player controller of this game has a very smooth movement that work in many environmental conditions, such as stairs, ladder, water, etc.
+- Environmental sound design. I'd talk about environmental sound design from more of technical standpoint, internally Source uses env_soundscape entity to place so-called soundscapes, which help to organize and place environmental ambience in game levels. Index: Purger use a very similar system.
+- Gameplay diversity. Half-Life 2 has a linear campaign, but this game's campaign is a good example how to diversify the campaign to keep it interesting for the majority of players. However, i should mention that is not an easy task to do and it requires a lot of playtesting to make a similar campaign. I'm not sure if i personally will be able to compete in these terms, but i would like to try my best to get the help of community for that.
+- Dystopian setting. This may sound very subjective, but i personally find it fun to play games with similar setting as well as fun to work with it, which affected my decision to make one in terms of Index: Purger.
+[Random footage of HL2 shenanigans]
+
+:: District maps for Garry's Mod
+District maps are a collection of 5 different maps where you take a role of a citizen that has to earn money in order to leave this district. Since you have arrived into anal cavity of the world, crime is the one and only ingredient for your success.
+- Simplicity. I would like to mention that this map was made with practically the very same toolset as Half-Life 2, with certain exceptions such as usage of Lua scripts to make NPCs have a custom melee weapon. This is inspiring, because i can make a similar game level in my own game as it has toolset that is flexible enough to allow such cases to be made.
+- Absurdity. When you hop into criminal conflict of the local groups, you are not getting into realistic kind of conflict where these groups are trying to stay cautious and stealthy. These guys don't care about anything and are going to start a bloodshed for no reason. While this may sound as a negative point, absurdity is exactly the thing that made it interesting to participate in that kind of conflicts which is definitely affect my design decisions as of today. Absurdity always gives a lot of freedom to design something interesting as result. Sadly, if you will make a game with a degree into absurdity, there are going to be players that will complain about the lack of realism and general logic, but that is an acceptable price to pay for.
+[Absurdity has to be paid for]
+- Exploration. These maps are not linear and allow yourself to explore the surroundings in a simplistic way. I would say that these maps actually represent a combined set of unique linear stories. While environments are not looking extremely appealing, level design aspect of these maps should be used as a good reference as it does give a feeling of freedom and make it interesting to explore everything, starting from various secret stashes to finding the bases of local criminal groups.
+- Atmosphere. These maps have a pretty much captivating dark atmosphere, which is also a good reference to use.
+[Paste footage of downtown_district ending with Cremation Lily song]
+
+:: Cruelty Squad
+You may heard about this game. It is known as a game with the most horrible visuals and audio to ever witness, however, there are people that love this game. Maybe because this game is a meme and just an internet phenomenon, but there are still inspiring game design solutions.
+
+- Game and Visual Design.
+Let me present you the revolutionary "Box" gameplay loop. You are cluelessly entering the box, going through undefined set of events and exit this box in order to enter another box. Jokes aside, it is impossible make a strictly defined gameplay loop when we are talking about singleplayer first-person shooters with linear campaign. If you are going to be too repetitive in this case, your campaign will become boring to play fast and that's why it is especially important to gather more players as they can report you when it gets too repetitive and suggest how exactly that would be possible to fix it. In this case, it can be tricky to find a balance between enjoyable repetitive patterns, diversity of your gameplay and acceptable development times. Simply saying, each game level has to get it's own gameplay approach in order to be interesting, making development times more lengthy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

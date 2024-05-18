@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/test0.mp3-80be687679850a823ce4fe52e89a9319.mp3str"
+
+[deps]
+
+source_file="res://resources/sounds/react_test/test0.mp3"
+dest_files=[ "res://.import/test0.mp3-80be687679850a823ce4fe52e89a9319.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

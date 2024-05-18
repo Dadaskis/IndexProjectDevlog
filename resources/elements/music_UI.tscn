@@ -1,0 +1,101 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://resources/scripts/label_fill.gd" type="Script" id=1]
+[ext_resource path="res://resources/fonts/RobotoMono-VariableFont_wght.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://resources/images/_music_UI/icon_OST.png" type="Texture" id=3]
+[ext_resource path="res://resources/shaders/textures/loading_screen/glitch.png" type="Texture" id=4]
+[ext_resource path="res://resources/shaders/textures/loading_screen/broken_glass_mask.png" type="Texture" id=5]
+[ext_resource path="res://resources/shaders/textures/loading_screen/broken_glass_move_mask.png" type="Texture" id=6]
+[ext_resource path="res://resources/shaders/textures/loading_screen/broken_glass_mask_gray.png" type="Texture" id=7]
+[ext_resource path="res://resources/shaders/textures/loading_screen/video_degradation.png" type="Texture" id=8]
+[ext_resource path="res://resources/shaders/music_UI.gdshader" type="Shader" id=9]
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 27
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 9 )
+shader_param/color_tint = Color( 1, 1, 1, 1 )
+shader_param/glare_power = 0.01
+shader_param/glare_steps = 24
+shader_param/glare_blur = 0.0
+shader_param/glare_offset = 0.001
+shader_param/video_degr_steps = 0
+shader_param/video_degr_time_scale = 0.0
+shader_param/video_degr_scale = 0.0
+shader_param/video_degr_step_offset = 0.0
+shader_param/video_degr_darken = 0.0
+shader_param/video_degr_brighten = 0.0
+shader_param/rgb_offset_uv_power = 0.005
+shader_param/rgb_offset_steps = 4
+shader_param/rgb_offset_power = 0.098
+shader_param/broken_glass_move_progress = -0.513
+shader_param/glitch_uv_scale = 0.0
+shader_param/glitch_power = 0.0
+shader_param/video_degr_tex = ExtResource( 8 )
+shader_param/broken_glass_tex = ExtResource( 5 )
+shader_param/broken_glass_gray_tex = ExtResource( 7 )
+shader_param/broken_glass_move_tex = ExtResource( 6 )
+shader_param/glitch_tex = ExtResource( 4 )
+
+[node name="music_UI" type="CanvasLayer"]
+layer = 12
+
+[node name="track_name" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -233.0
+margin_top = -73.0
+margin_right = 17.0002
+margin_bottom = -20.0
+grow_horizontal = 0
+rect_min_size = Vector2( 250, 0 )
+rect_scale = Vector2( 0.802364, 0.802364 )
+custom_fonts/font = SubResource( 4 )
+align = 2
+valign = 2
+script = ExtResource( 1 )
+letter_delay = 0.059
+start_on_event = false
+font_size = 40
+
+[node name="now_playing" type="Label" parent="track_name"]
+margin_top = -59.0
+margin_right = 264.0
+margin_bottom = -6.0
+grow_horizontal = 0
+custom_fonts/font = SubResource( 2 )
+text = "Now Playing..."
+valign = 2
+
+[node name="icon" type="TextureRect" parent="track_name"]
+margin_left = -139.0
+margin_top = -52.0
+margin_right = 2.0
+margin_bottom = 70.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="effect" type="ColorRect" parent="track_name"]
+material = SubResource( 3 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -143.0
+margin_top = -67.0
+margin_right = 16.0
+margin_bottom = 15.0
