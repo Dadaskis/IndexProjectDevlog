@@ -1,53 +1,48 @@
 Episode 1 plot
 
-- Powered by Godot Engine. "This game is made in Godot. This video is also made with Godot. Godot, can you fix my life?"
+- Powered by Godot Engine. "This game and this entire video is made with Godot Engine"
 
 - Play expt73_bend. I love this one.
 
 - Ordered set of footages that will be used during this video. For the time being it is undefined. Mainly this part is needed for music to play, really.
 
 - The start.
-Hello everyone and welcome to the first episode of the Index: Purger devlog. In this episode, i would like to introduce you into this game project, so i'll try to keep it as short as possible while keeping it informative enough. 
-
-- Shoutout.
-Before i start; Shoutout to Road to Vostok devlog that is heavily inspiring me during creation of this episode. Two years ago i've seen it for first time and i thought that would be amazing to make that kind of series for this project too, however, it turned out to be way more problematic to showcase this project during the earlier stages of development. I guess people with broken accent are often doing wild things.
+Hello everyone and welcome to the first episode of the Index: Purger devlog. In this episode, i would like to introduce you into this game project, so i'll try to keep it as short as possible while keeping it informative enough, i hope i've got it balanced enough.
 
 - Plans.
+During this devlog i would like to share progress of development of this game, as well as share technical information that may be helpful for developers or may be interesting for players. That may include my thoughts about game design in general, workflows, tools made for Godot and etc. This way, i hope these series will be both informative when it comes to telling about this game's development progress and also be helpful for others. Besides that, i hope to build up a community around this game in order to gain more community feedback to improve this game in all possible aspects.
 This episode will be covering the following set of moments:
 - A Short Brief into Game.
-- What Can You See in These Series?
 - How This Project was Started?
-- The Main Inspiration.
-- The Side Inspiration.
-- Game and Visual Design.
+- Main Inspiration.
+- Side Inspiration.
+- Game Design - Gameplay States.
 - Showcase of Currently Developed Mechanics.
+- Visual Design.
 - Development Tools.
-- Roadmap and Future Plans.
+- Future Plans.
 - And How Can YOU Participate in Development of This Project?
 Let's get started!
 
 - Short Brief into Game.
-Index: Purger is an experimental fast-paced first-person shooter powered by Godot Engine, in this game you take a role of Omega Security mercenary, which participates in variety of military operations in the restricted zones and variety of other missions. The world of the game is set in a dystopian cityscape known as Index-0. You will have a broad selection of equipment and perks to deal with extreme military conflicts which will always be a part of the main character's "job". Experimentation with equipment and perks is a way to survive in this bloody sandbox. Besides that you'll be able to participate in "days of citizen life" of the main character, during which you can choose between living a peaceful life or turning the sector into criminal bloodshed as well as learning more about the surrounding game world and participating in various events.
-
-- What Can You See in These Series?
-During this devlog i would like to share progress of development of this game, as well as share information that may be helpful for developers or may be interesting for players. That may include my thoughts about game design in general, workflows, tools made for Godot and etc. This way, i hope these series will be both informative when it comes to telling about this game's development progress and also be helpful for others. Besides that, i hope to build up a community around this game in order to gain more community feedback to improve this game. Voice of everyone will be heard.
+Index: Purger is an experimental, fast-paced, singleplayer first-person shooter, set in a dystopian cityscape known as Index-0. The main game design target of this project is to create unusual story, that would combine bloodshed of the mercenary's job and citizen life of the character. In this game you take a role of Omega Security mercenary, which participates in variety of military operations in the restricted zones and other important missions of this security company. You will have a broad selection of equipment and perks to deal with extreme military conflicts which will always be a part of the main character's "job". Experimentation with equipment and perks is a way to survive in this bloody sandbox. Besides that you'll be able to participate in "days of citizen life" of the main character, during which you can choose between living a peaceful life or turning the sector into criminal bloodshed as well as exploring the surrounding game world and participating in various events.
 
 - How This Project was Started?
-This project was started at May 2022, i've been fooling around in Godot Engine and made my personal test project in form of the first-person shooter. Back then i thought this engine isn't advanced enough for that kind of stuff, but the more i've been working with it, the more fun i found it to use, it was so easy to make a game with it, much easier than Unity for some reason. When Unity stripped me of possibility to control anything with code, Godot given an actual possibility to automize everything with code, which i highly appreciate and that basically untied my hands in all possible ways. The project has slowly became a heavy prototype with mechanics and huge variety of blockouts in relatively short amount of time, becoming a strong foundation to build a fast-paced first-person shooter. I'm not saying that Godot is a flawless engine, but people underestimated (and still seem to underestimate) its possibilities in making of 3D games. Godot still cannot compete with other engines that have broad marketplaces for assets and code and that may have more polished features for making of 3D games, but Godot is certainly unique when it comes to creation of the game from scratch as prototyping is extremely fast, you have a total control over everything and you will not have anything that would make your game heavier from the start due to lightweight design of the engine. Besides that Godot can be used for creation of any kind of standalone application, which may be useful for creation of utility tools or other kinds of programs, such as the one that i use to make this video.
+This project was started at May 2022 as a hobby project in form of the first-person shooter, main goal of the project was to make a basic prototype of first-person shooter on Godot Engine just to see how far can it go. Back then i thought this engine isn't advanced enough for that kind of stuff, but the more i've been working with it, the more fun i found it to use, it was so easy to make a game with it, much easier than Unity for some reason. When Unity stripped me of possibility to control anything with code usually forcing to use workflows that i don't like, Godot given an actual possibility to automize everything with code and set up my own rules for everything, which i highly appreciate and that basically untied my hands in all possible ways. The project has slowly became a heavy prototype with mechanics and huge variety of blockouts in relatively short amount of time, becoming a strong foundation to build a fast-paced first-person shooter. I'm not saying that Godot is a flawless engine, but people underestimated (and still seem to underestimate) its possibilities in making of 3D games. Godot still cannot compete with other engines that have broad marketplaces for assets and various game systems and that may have more polished features for making of 3D games in general, but Godot is certainly unique when it comes to creation of the game from scratch as prototyping is extremely fast, you have a total control over everything and you will not have anything that would make your game heavier from the start due to lightweight design of the engine. Besides that Godot can be used for creation of any kind of lightweight standalone application, which may be useful for creation of utility tools or other kinds of programs, such as the one that i use to make this entire video...
+[Potential rewrite to tell more about Build 0 as it can be shown better]
 
-- The Main Inspiration.
-There are basically three main inspirations that i had. Of course a lot of various shooters are inspiring me when it comes to a set of elements of this game, and i'm talking about shooters like Escape From Tarkov or Battlefield 3 for example, but still, when it comes to the core, mainly i'm inspired by Half-Life 2, District maps for Garry's Mod and Cruelty Squad. That might seem as a bunch of wild picks, but let me explain...
+- Main Inspiration.
+There are basically three main inspirations that i had. Of course there are a lot of various shooters that are inspiring me when it comes to a set of elements of this game, and i'm talking about shooters like Escape From Tarkov or Battlefield 3 for example, but still, when it comes to the core, mainly i'm inspired by Half-Life 2, District maps for Garry's Mod and Cruelty Squad. That might seem as a bunch of wild picks, but let me explain...
 
-:: Half-Life 2
-Probably Half-Life 2 is ancient at this point, but i cannot say it became less influencial with time, at least for myself.
-- Graphics. What is very inspiring in the graphics of this game is how simple the workflow for the environmental props and for the brush textures. Simple, but rather effective. Additionally, lighting and usage of colors in this game is very much inspiring too.
-- Movement. The player controller of this game has a very smooth movement that work in many environmental conditions, such as stairs, ladder, water, etc.
-- Environmental sound design. I'd talk about environmental sound design from more of technical standpoint, internally Source uses env_soundscape entity to place so-called soundscapes, which help to organize and place environmental ambience in game levels. Index: Purger use a very similar system.
+:: Half-Life 2.
+I think this game is known by everybody at this point, in Half-Life 2 you are playing as Gordon Freeman during the times when aliens has taken over the Earth. Welcome, welcome to City-17. You have chosen, or been chosen... To continue watching this video.
+- Graphics. What is very inspiring in the graphics of this game is how simple the workflow for the environmental props and for the brush textures. Simple, but rather effective. Additionally, lighting and usage of colors in this game can be used as a reference.
+- Movement. The player controller of this game has a very smooth movement that work in many environmental conditions, such as stairs, ladders, water, etc. It makes it a perfect reference to use for any kind of first-person game.
+- Environmental sound design. I'd talk about environmental sound design from more of technical standpoint. Internally Source uses env_soundscape entity to place so-called soundscapes, which help to organize and place environmental ambience in game levels. Index: Purger use a very similar system.
 - Gameplay diversity. Half-Life 2 has a linear campaign, but this game's campaign is a good example how to diversify the campaign to keep it interesting for the majority of players. However, i should mention that is not an easy task to do and it requires a lot of playtesting to make a similar campaign. I'm not sure if i personally will be able to compete in these terms, but i would like to try my best to get the help of community for that.
 - Dystopian setting. This may sound very subjective, but i personally find it fun to play games with similar setting as well as fun to work with it, which affected my decision to make one in terms of Index: Purger.
-[Random footage of HL2 shenanigans]
 
-:: District maps for Garry's Mod
+:: District maps for Garry's Mod.
 District maps are a collection of 5 different maps where you take a role of a citizen that has to earn money in order to leave this district. Since you have arrived into anal cavity of the world, crime is the one and only ingredient for your success.
 - Simplicity. I would like to mention that this map was made with practically the very same toolset as Half-Life 2, with certain exceptions such as usage of Lua scripts to make NPCs have a custom melee weapon. This is inspiring, because i can make a similar game level in my own game as it has toolset that is flexible enough to allow such cases to be made.
 - Absurdity. When you hop into criminal conflict of the local groups, you are not getting into realistic kind of conflict where these groups are trying to stay cautious and stealthy. These guys don't care about anything and are going to start a bloodshed for no reason. While this may sound as a negative point, absurdity is exactly the thing that made it interesting to participate in that kind of conflicts which is definitely affect my design decisions as of today. Absurdity always gives a lot of freedom to design something interesting as result. Sadly, if you will make a game with a degree into absurdity, there are going to be players that will complain about the lack of realism and general logic, but that is an acceptable price to pay for.
@@ -56,32 +51,117 @@ District maps are a collection of 5 different maps where you take a role of a ci
 - Atmosphere. These maps have a pretty much captivating dark atmosphere, which is also a good reference to use.
 [Paste footage of downtown_district ending with Cremation Lily song]
 
-:: Cruelty Squad
+:: Cruelty Squad.
 You may heard about this game. It is known as a game with the most horrible visuals and audio to ever witness, however, there are people that love this game. Maybe because this game is a meme and just an internet phenomenon, but there are still inspiring game design solutions.
+- Broken game world. Apparently people actually want to have a possibility to break the game world through various means. While i will not be able to make it to an extreme extent as Cruelty Squad does it, that still is inspiring to add various ways to break Index: Purger because, well, it is always fun to break a videogame.
+- Weapon design. Weirdly enough, weapon design of Cruelty Squad is a decent example how to design it in a way to make weapons not only variative, but also make it an interesting subject to collect.
+- Simplistic gameplay loop. You enter the mission, kill the target, escape, repeat. It sounds bad on words, but in action it does work well and it might be a nice subject to use as a reference in this game project to design gameplay loops and levels for them.
 
-- Game and Visual Design.
-Let me present you the revolutionary "Box" gameplay loop. You are cluelessly entering the box, going through undefined set of events and exit this box in order to enter another box. Jokes aside, it is impossible make a strictly defined gameplay loop when we are talking about singleplayer first-person shooters with linear campaign. If you are going to be too repetitive in this case, your campaign will become boring to play fast and that's why it is especially important to gather more players as they can report you when it gets too repetitive and suggest how exactly that would be possible to fix it. In this case, it can be tricky to find a balance between enjoyable repetitive patterns, diversity of your gameplay and acceptable development times. Simply saying, each game level has to get it's own gameplay approach in order to be interesting, making development times more lengthy.
+- Side Inspiration.
+While there are games that directly affect this game project's vision on game and visual design, there are also games that affected it in smaller features of the game.
 
+:: Payday: The Heist and Payday 2.
+- These games are about clowns which are brutally robbing everything they can get their hands on. And all of that stuff happens when blasting soundtrack is playing. I would like to point out that different parts of soundtrack is playing during different stages of the robbery, which, of course, inspired me to make a similar system for the mercenaries' job. This game is using music everywhere, when you are in a main menu, during preparation stage, when you've won or lost. Music is a universal language that can make your game uniquely express itself if done right and these games are a good example of that.
 
+:: Escape From Tarkov.
+- There is a plenty of things that shooter just done right, that are: Flashbangs, Night-Vision Goggles, variety of equipment like armor and ammo rigs, damagable helmet visors and recoil model of the weapons. All of that stuff had been affected in Index: Purger by Tarkov.
 
+:: Max Payne 1
+- Besides being a direct inspiration for bullet-time when you use an I-EXP23 injector, Max Payne 1 is also featuring a comics system that allowed the devs to tell a story without any complex cut-scenes. I'm going to make a similar system because, well, i'm an indie developer that has no way to make motion capture animations. Comics for the win!
 
+- Game Design.
+During this section i'm going to talk only about the gameplay loop logic, generally game design of this project is a huge topic to talk about and i will not be able to cover it all in just in one introduction video, but description of the gameplay loop logic should make it easy to understand what kind of game that is.
 
+:: Gameplay Loop.
+Let me present you the revolutionary "Box" gameplay loop. You are cluelessly entering the box, going through undefined set of events and exit this box in order to enter another box. Jokes aside, it is impossible to make a single strictly defined gameplay loop when we are talking about singleplayer first-person shooters. If you are going to be too repetitive in this case, your game will become boring to play fast and that's why it is especially important to gather more players early as they can report you when it gets too repetitive and suggest how exactly that would be possible to fix it. In this case, it can be tricky to find a balance between enjoyable repetitive patterns, diversity of your gameplay and acceptable development times. Simply saying, ideally each game level has to get it's own gameplay approach in order to be interesting, making development times more lengthy and disclosing a lot of potential to fall down the rabbit hole of suffering.
 
+However, does it mean that is impossible to define strict rules on gameplay in this case? Well, in terms of this project, it is possible by making multiple kinds of strictly defined gameplay loops that can be used in various cases with potential modification for a specific game level to be a tight bit more interesting. In terms of this project, that might be easier to describe the gameplay loops by splitting the game to 3 different gameplay states: The citizen state, the operation state and the mission state.
 
+:: The Citizen State.
+During this state, you are taking a role of an Index-0 citizen and you have a limited degree of freedom that you can use for your own interests. Honestly, this state takes the "box" gameplay loop to its maximum, however, it is still possible to define rules. Firstly, if you commit a crime, most likely you will have to deal with the local authorities in form of the police units. You can get a law prosecution for killing other citizens or for trespassing into areas where you are not meant to be. Depending on the status of the zone you are in, it may be easier or harder to get a law prosecution. For example, the restricted zones have the maximum level of security while in the poor zones nobody cares much right until you start an actual massacre of all citizens. In all citizen days, you will have an option to participate in a set of linear questlines, which is usually about joining some of the crime groups and doing their activities. Besides that, there may be additional kinds of activities, such as achievement hunt, exploration of the location for various goods, etc. As result, it becomes that kind of complex non-linear gameplay loop.
 
+:: The Operation State.
+When you are joining the Omega Security for good, you will get access to operations of this security company. You can choose any of the provided operations, accomplish them to get a reward in form of additional EXP. During this state, you have a choice to either farm more EXP to get more equipment and perks, or to spend this EXP to continue the main mission of this security company (which eventually continue the main character's story). There might be several types of operations: Looting, capture and high-value target. This list may not be limited to these types only, but it might be easier to provide these as an example.
 
+= Looting.
+- You enter certain area to explore it to find some goods. The name of this type is pretty much self-explanatory, you will find valuable loot in that location and escape when you find enough loot. During this operation, you may get combat scenarios with local bandits or with the enemy security company. This type requires pretty much open locations with possibility to enter inside the buildings to search for goods.
 
+= Capture.
+- The enemy security company is setting up various "connection points" in the restricted zones to make a secure encrypted communication channel. During this type, your main target is to capture all of the "connection points" which eventually will lead to elimination of all enemy forces in that area. Once you capture all of the points, your mission successfully ends.
 
+= High-Value Target.
+- Omega Security may order you to eliminate certain kind of high-value target... anywhere really. You start in a certain area, locate the target, eliminate it, exit the area. Simple as that.
 
+These types are simple on their own and each of them require only one game level for all the action. The main reason this state has to exist in this game is because it provides an actual possibility to experiment with equipment and perks before starting the main mission state. Additionally, it provides a possibility to farm for the equipment or perks. Repetitiveness of these operations also allow to hide some secrets which eventually can be found because most likely people will explore the whole location before starting the main mission.
 
+Due to technical reasons, you will only have 3 available operations before certain main mission. After accomplishment of the main mission, your list of operations will be changed. The reason for that is locational preloading that makes switching between locations extremely fast, the only problem is related to need of additional memory and videomemory. 3 game levels can be used a decent middle value, because in this case these levels can be decently detailed while not being too costy in memory.
 
+:: The Mission State.
+This state represents a complex set of events combined into one mission and may require multiple locations to cover them all avoiding all potential technical issues. Sadly it is impossible to describe this state as a strictly defined set of rules like previous states, however, there is already a mission that can serve as a good example, "The Get-Inn Mall Defense". Basically, you start this state from the Omega Security presentation that provides you infomation to prepare for the ongoing events. This presentation informs you about the plot and about the various future dangerous factors to deal with, which may affect your decision on choice of the equipment. "The Get-Inn Mall Defense" consists of variety of locations, starting from m_day1_1 and ending with m_day1_3_post1. Each of these locations set up their own rules in order to tell different parts of the story. During m_day1_1, you start with the news audio... [news here] ... and continue with killing the enemy squad you have first met, you inform the Overwatch about the neutralized units, get information about the incoming attack of enemy troops and as result this section of the mall turns into wide-ranged arena. Once you are completing the arena section, you will defuse all of the explosions and proceed into the neighboring computer store to take over it, which is m_day1_2. As you see, m_day1_1 has it's very own gameplay loop. Same as [start showing the algorithm scheme for each gameplay loop] m_day1_2, m_day1_2_post0, m_day1_2_post1, m_day1_3, m_day1_3_post0, m_day1_3_post1. While this may sound tricky to implement, i think it depends on your toolset and your will to replay the same level over and over again in order to build a nice blockout.
 
+- Showcase of Currently Developed Mechanics.
+[Just a bunch of videos with text that would describe what kind of developed feature that is. This section is about showing the whole thing to people without talking about it.]
+:: Player Movement - Walking
+:: Player Movement - Stairs
+:: Player Movement - Ladder
+:: Player Movement - Water
+:: Weapon System
+:: NPCs
+:: Soundscapes
+:: Loadout System
+:: Achievements
+:: Save System
+:: Destructible Elements
+:: Dialog System
+:: Helmet Visors
+:: Night Vision Goggles
+:: Truly Confusing List of Settings
+:: Low Health Effects
+:: Suppression Effect
+:: Flashbangs
+:: Color Grading
+:: Game Menu / Main Menu
+:: Music System / Voicelines System
+:: Surface Detection
+:: Tasks / Task Points
 
+- Visual Design.
+When you make visual design for a 3D game, you have to combine several things: Aesthetical beauty, development speed and technological possibilities. In this triangle, you really have to pick your poison and most likely you will be screwed up one way or another if you use semi-realistic elements. It is hard to design it in an actually perfect way, but i suppose that imperfections of specific projects make them visually unique as result. Before starting to talk about the visual idea of this game, i will talk about the core basics first. 
 
+:: Materials.
+There is a long story behind materials in this game, i would like to cover it in a separate episode. Index: Purger is using Physically-Based Rendering for everything, it is using a following texture set: Diffuse map, normal map and MRSAO map. MRSAO map is just a channel packed texture that contains metalness, roughness, specular and ambient occlusion values inside. This way materials in this game are optimized enough in terms of OpenGL texture switch operations and are relatively optimized in VRAM usage. There exceptions when materials do not use full PBR set, but that's a whole different topic to cover. Why did i choose PBR as result? Simply because it allows for more creative control and there are plenty of procedural tools to work with PBR materials. For example, Quixel Mixer allows you to use multiple PBR materials to make your own material, or, more than that, gives you a lot of fancy layer masks to use to make decent tile-like materials. If you are into PBR stuff, i highly recommend taking a look on this tool for neat blending of your materials for your game levels.
 
+:: Textures / References.
+To start with... I'm not using local surroundings as a reference simply because there are no interesting environments to recreate or if there are some, they won't fit into this game as a playable environment. Therefore using local environments for textures is also under question. That forced me to build entire visual workflow of this game around the idea of not exiting the home for references or textures. Surprisingly, the internet has a ton of stuff for everything. One of my personal favorites for textures are "Texture Ninja" and "Texturer" websites. For basic PBR textures and basic HDRIs - "AmbientCG" and "Polyhaven". For free Creative-Commons-0 sounds - "Freesound.ORG". All of the links are listed in the description. Pretty much same deal with references as well, i'm using Pinterest and Google to look for more imagery to use as a reference. I'm using PureRef to be able to organize and look into a huge set of references.
 
+:: Visual Idea.
+The main visual idea of Index: Purger is about creation of surrealistic experience that resembles experience of the older games in a slightly modernized way. Besides general nostalgia that i have about the old shooters, there are 2 specific reasons of that choice: Freedom and technical limitations. Surrealism actually provides an extreme degree of freedom to design anything with ease, potentially making it easier to develop as well as giving a possibility to make interesting ideas to make this game more fun. That's where i take Half-Life 2 as an example of proper use of surrealism to create a captivating, believable experience. But, besides that, there are also technical limitations that do not allow myself to work on way too complicated visuals, which realistic assets tend to be. Mainly, i designed it in a way to have fun with it during development, and, you know what? I had plenty of fun with it during 2 years of development.
 
+- Development Tools.
+[Same as features showcase, except it is going to cover various tools.]
+:: Custom Ubershader
+:: Splitting the exported game to multiple packs.
+:: Console Commands
+:: Developer Menu
+:: Dialog Editor
+:: Blender Plugin
+:: PropKit
+:: Fire
+:: Dust Motes
+:: Smoke
+:: Clouds
+:: Light Volume
+:: Point Particle
+:: Sprite
+:: Mesh Combiner
+:: Triggers / Buttons
 
+Development tools are essential to make the development not only effective, but also satisfying. There are a lot of people that treat game development process as nothing but repetitive suffering. While this may be partially true, properly designed development tools may help to avoid problems and make development actually enjoyable. I've shown you a list of tools that i have, however, there is one more important tool that i want to talk about: Locational Events. Location events help to define gameplay logic with help of "Script Toolkits", "Script Components" and variety of other nodes. That is basically the way how i construct gameplay in game levels of this project. When you use a button for example, it can emit a location event with a specified name. Here i've placed a button that would spawn an NPC after pressing it. Other scripts are listening to location events, and, if the name of the event is equal to the one they are listening for, it runs the logic. "Script Toolkits" are small objects that run some kind of logic, like the "delay script toolkit" that receives an event and runs an event after some time. "Script Components" modify behavior of already existing nodes, for example by adding a special component to location prop, you can turn it to a rotating door. This way it is possible to construct the gameplay with ease by using prebuilt blocks, which also allows to make a save system that would allow to save all values with an extreme precision.
 
+- Future Plans.
+For now, i want to continue to develop this game and i'm planning to release a publicly available demo at quarter 3 of 2024.
+[Add More]
 
-
+- How Can YOU Participate in Development of This Project?
+You can support this project by just joining the Discord server that you can see in the description. This way you'll be able to communicate with everyone including me, talk about the project, criticize it, suggest your own ideas and participate in community votings.
+[Add More]
